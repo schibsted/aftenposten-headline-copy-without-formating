@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Aftenposten Headline Copier",
+    "description": "Copy headlines from Aftenposten's liveblogs without the styling.",
+    "version": "1.0",
+    "action": {
+    },
+    "background": {
+    },
+    "commands": {
+    },
+    "permissions": ["activeTab", "scripting", "tabs"],
+    "host_permissions": [
+        "https://aftenposten.no/*"
+    ],
+    "content_scripts": [
+        {
+            "matches": ["*://*.aftenposten.no/*"],
+            "js": ["src/main.js"]
+        }
+    ]
+  }
